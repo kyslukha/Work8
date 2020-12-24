@@ -13,11 +13,19 @@ public class Horse {
         System.out.println("Please, entered place of Horse, digital ");
         int columnn1 = scanner1.nextInt();
         int row1 = findRow(letter1);
+        if ((row1 == 100)||(columnn1 <= 0)||(columnn1 >= 9)){// add for case of wrong points
+            System.out.println("You enter the wrong points for cheese ");
+            return;
+        }
         System.out.println("Please, entered new place of Horse, letter");
         String letter2 = scanner2.nextLine();
         System.out.println("Please, entered new place of Horse, digital ");
         int columnn2 = scanner3.nextInt();
         int row2 = findRow(letter2);
+        if ((row2 == 100)||(columnn2 <= 0)||(columnn2 >= 9)){// add for case of wrong points
+            System.out.println("You enter the wrong points for cheese ");
+            return;
+        }
         if (((Math.abs(columnn1 - columnn2) == 2) && (Math.abs(row1 - row2) == 1) || ((Math.abs(columnn1 - columnn2) == 1) && (Math.abs(row1 - row2) == 2)))) {
             System.out.print("It is possible");
         } else {

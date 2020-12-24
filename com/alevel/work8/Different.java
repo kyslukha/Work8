@@ -11,6 +11,7 @@ public class Different {
             System.out.print(" " + myArray[i]);
         }
         int different = findDifferent(myArray);
+
         System.out.print(" Different elements are " + different);
     }
 
